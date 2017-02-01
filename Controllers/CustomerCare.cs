@@ -1,12 +1,22 @@
 using Microsoft.AspNetCore.Mvc;
+[Route("customer")]
     public class CustomerCareController : Controller
     {
         public IActionResult Index()
         {
         return Ok("This is the index of the CustomerCareController");
         }
-        public IActionResult Claims()
+
+        [Route("fileclaim")]
+        public IActionResult NewClaim()
         {
-            return Ok("Claims");
+            return Ok("NewClaim");
         }
+
+        [Route("ClaimStatus")]
+        public IActionResult ClaimHistory()
+        {
+            return Ok("My Claims");
+        }
+        
     }
